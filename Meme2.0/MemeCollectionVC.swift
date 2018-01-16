@@ -9,7 +9,18 @@
 import Foundation
 import UIKit
 
-class MemeCollectionVC: UICollectionView {
+class MemeCollectionVC: UICollectionViewController {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var memes = [Meme]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        memes = appDelegate.memes
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
     
     
 }

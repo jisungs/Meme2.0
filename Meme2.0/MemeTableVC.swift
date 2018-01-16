@@ -9,7 +9,17 @@
 import Foundation
 import UIKit
 
-class MemeTableVc : UITableView {
+class MemeTableVc : UITableViewController {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var memes = [Meme]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        memes = appDelegate.memes
+    }
     
     
 }

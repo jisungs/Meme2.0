@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07531087200EA0810082D769 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07531086200EA0810082D769 /* Meme.swift */; };
 		96DFFFBF200AED8100EEAF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFFFBE200AED8100EEAF2F /* AppDelegate.swift */; };
 		96DFFFC1200AED8100EEAF2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFFFC0200AED8100EEAF2F /* ViewController.swift */; };
 		96DFFFC4200AED8100EEAF2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DFFFC2200AED8100EEAF2F /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07531086200EA0810082D769 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		96DFFFBB200AED8100EEAF2F /* Meme2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFFFBE200AED8100EEAF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96DFFFC0200AED8100EEAF2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				96DFFFBE200AED8100EEAF2F /* AppDelegate.swift */,
+				07531086200EA0810082D769 /* Meme.swift */,
 				96DFFFC0200AED8100EEAF2F /* ViewController.swift */,
 				96DFFFC2200AED8100EEAF2F /* Main.storyboard */,
 				96DFFFD0200AEDE300EEAF2F /* MemeEditorVC.swift */,
@@ -148,6 +151,7 @@
 				96DFFFD1200AEDE300EEAF2F /* MemeEditorVC.swift in Sources */,
 				96DFFFC1200AED8100EEAF2F /* ViewController.swift in Sources */,
 				96DFFFD3200AEE1600EEAF2F /* MemeCollectionVC.swift in Sources */,
+				07531087200EA0810082D769 /* Meme.swift in Sources */,
 				96DFFFD5200AEE3B00EEAF2F /* MemeTableVC.swift in Sources */,
 				96DFFFBF200AED8100EEAF2F /* AppDelegate.swift in Sources */,
 			);
