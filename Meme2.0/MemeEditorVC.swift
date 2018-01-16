@@ -11,6 +11,9 @@ import UIKit
 
 class MemeEditorVC {
     
+    
+    
+    /*
     func save() {
         // Create the meme
         let meme = Meme(top: topField.text!, bottom: bottomField.text!, image: imageView.image, memedImage: memedImage)
@@ -20,7 +23,7 @@ class MemeEditorVC {
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
     }
-
+*/
     
     
 }
