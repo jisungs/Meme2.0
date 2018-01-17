@@ -15,7 +15,6 @@ class MemeCollectionVC : UICollectionViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes = [Meme]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         memes = appDelegate.memes
