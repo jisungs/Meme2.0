@@ -61,11 +61,11 @@
             </objects>
             <point key="canvasLocation" x="-42" y="-273"/>
         </scene>
-        <!--Meme CollectionVC-->
+        <!--Collection View Controller-->
         <scene sceneID="QEV-1X-Fby">
             <objects>
-                <collectionViewController id="MmH-P9-Awh" customClass="MemeCollectionVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8vW-tB-xGg" customClass="MemeCollectionView" customModule="Meme2_0" customModuleProvider="target">
+                <collectionViewController id="MmH-P9-Awh" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8vW-tB-xGg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
