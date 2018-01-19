@@ -31,7 +31,7 @@
         <scene sceneID="tqN-s5-jU6">
             <objects>
                 <navigationController id="NXk-Uo-KsV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="560-oE-XTm"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="table_30x30" id="560-oE-XTm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ylk-FW-wIm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -48,7 +48,7 @@
         <scene sceneID="LRC-U8-LRs">
             <objects>
                 <navigationController id="pnw-5d-a8D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2BG-qd-l04"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="collection_30x30" id="2BG-qd-l04"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IgP-b7-qyT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -138,4 +138,8 @@
             <point key="canvasLocation" x="858" y="440"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection_30x30" width="30" height="30"/>
+        <image name="table_30x30" width="30" height="30"/>
+    </resources>
 </document>
