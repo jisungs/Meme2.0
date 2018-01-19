@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class MemeTableViewCell : UITableViewCell {
+    var memes = [Meme]()
+    
+    @IBOutlet weak var memeImage: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    
     
     
 }
