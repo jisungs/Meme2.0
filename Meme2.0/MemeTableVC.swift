@@ -25,4 +25,19 @@ class MemeTableVc : UITableViewController {
         
     }
     
+    //Why it need "override"?
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return appDelegate.memes.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell", for : indexPath) as! MemeTableViewCell
+        
+        let meme = appDelegate.memes[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = meme.topText
+        cell.imageView?.image = meme.memedImage
+        
+        return cell
+    }
+    
 }

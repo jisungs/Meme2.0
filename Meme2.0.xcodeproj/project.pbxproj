@@ -297,7 +297,6 @@
 		96DFFFCE200AED8100EEAF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFY22SQMW;
 				INFOPLIST_FILE = Meme2.0/Info.plist;
@@ -312,7 +311,6 @@
 		96DFFFCF200AED8100EEAF2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFY22SQMW;
 				INFOPLIST_FILE = Meme2.0/Info.plist;
