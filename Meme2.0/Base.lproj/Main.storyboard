@@ -60,7 +60,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP1-fI-6xK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="-273"/>
+            <point key="canvasLocation" x="-52" y="-436"/>
         </scene>
         <!--Meme CollectionVC-->
         <scene sceneID="QEV-1X-Fby">
@@ -103,11 +103,12 @@
                     <navigationItem key="navigationItem" id="gPJ-rN-cky"/>
                     <connections>
                         <outlet property="flowLayout" destination="BsS-or-XH0" id="vYq-P0-U5P"/>
+                        <segue destination="aGC-zl-XSc" kind="push" identifier="collectionDetailSegue" id="GJq-CL-yep"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddY-Is-1M3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="-273.01349325337333"/>
+            <point key="canvasLocation" x="807" y="-437"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="vF3-Iq-6Ap">
@@ -118,25 +119,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" rowHeight="36" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MemeTableCell" rowHeight="36" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gws-rb-kK8" id="BaM-TI-t7c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="35.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="aGC-zl-XSc" kind="push" identifier="tableDelegateSegue" id="3Vw-E7-vd0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="69t-Sc-ab2" id="xcr-yE-eZZ"/>
-                            <outlet property="delegate" destination="69t-Sc-ab2" id="hkN-Hl-d3D"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4sp-KQ-4Y9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AP-j4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="439.43028485757122"/>
+        </scene>
+        <!--Meme EditorVC-->
+        <scene sceneID="KTc-GR-MUN">
+            <objects>
+                <viewController id="HOJ-q3-NXR" customClass="MemeEditorVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a4H-Cf-IQi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Yfz-Qx-CkP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMD-O2-vGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="-438"/>
         </scene>
         <!--Meme DetailVC-->
         <scene sceneID="uxf-kw-vO1">
@@ -167,19 +182,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uF2-yt-bXN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BsW-wf-Ehv"/>
                     <connections>
-                        <outlet property="memeImageView" destination="Khz-kI-0jk" id="Fma-Wt-2Ms"/>
+                        <outlet property="imageView" destination="Khz-kI-0jk" id="L92-ML-9OS"/>
                         <outlet property="memeLabel" destination="3Jt-5A-iad" id="bvV-15-Hzi"/>
                         <outlet property="view" destination="3Jt-5A-iad" id="iFE-T2-hNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj3-91-PPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1529.6851574212894" y="436"/>
+            <point key="canvasLocation" x="2062" y="439"/>
         </scene>
     </scenes>
     <resources>
         <image name="collection_30x30" width="30" height="30"/>
         <image name="table_30x30" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Vw-E7-vd0"/>
+    </inferredMetricsTieBreakers>
 </document>

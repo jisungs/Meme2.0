@@ -9,14 +9,12 @@
 import Foundation
 import UIKit
 
-class MemeEditorVC :UIViewController {
+class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    
     
     /*
     func save() {
