@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -118,47 +118,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="gws-rb-kK8">
-                                <rect key="frame" x="0.0" y="28" width="375" height="103"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" rowHeight="36" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gws-rb-kK8" id="BaM-TI-t7c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Brv-Tu-i4J">
-                                            <rect key="frame" x="16" y="0.0" width="103" height="89"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgx-lJ-CZv">
-                                            <rect key="frame" x="138" y="20" width="221" height="48"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="221" id="ugB-lK-uk5"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="leading" secondItem="Brv-Tu-i4J" secondAttribute="trailing" constant="19" id="4Ua-UL-jsg"/>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="trailing" secondItem="BaM-TI-t7c" secondAttribute="trailingMargin" id="GpV-NW-M5Y"/>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="trailing" secondItem="BaM-TI-t7c" secondAttribute="trailingMargin" id="I5Y-ZT-dSv"/>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="centerY" secondItem="Brv-Tu-i4J" secondAttribute="centerY" id="JPt-1q-kYi"/>
-                                        <constraint firstAttribute="bottom" secondItem="Brv-Tu-i4J" secondAttribute="bottom" constant="13.5" id="RAE-jV-ehs"/>
-                                        <constraint firstItem="Brv-Tu-i4J" firstAttribute="top" secondItem="BaM-TI-t7c" secondAttribute="top" id="UZV-GA-VOH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="fgx-lJ-CZv" secondAttribute="bottom" constant="24" id="c6Y-UV-NXb"/>
-                                        <constraint firstItem="Brv-Tu-i4J" firstAttribute="leading" secondItem="BaM-TI-t7c" secondAttribute="leading" constant="16" id="g6f-7f-okm"/>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="top" secondItem="BaM-TI-t7c" secondAttribute="topMargin" constant="9" id="nhi-eF-aGf"/>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="top" secondItem="BaM-TI-t7c" secondAttribute="topMargin" constant="9" id="ynN-ux-8oz"/>
-                                        <constraint firstItem="fgx-lJ-CZv" firstAttribute="leading" secondItem="Brv-Tu-i4J" secondAttribute="trailing" constant="19" id="zfn-kF-qHC"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="69t-Sc-ab2" id="xcr-yE-eZZ"/>
                             <outlet property="delegate" destination="69t-Sc-ab2" id="hkN-Hl-d3D"/>
-                            <outlet property="label" destination="fgx-lJ-CZv" id="F1J-Lv-3j6"/>
-                            <outlet property="memeImage" destination="Brv-Tu-i4J" id="Gxs-wk-7VV"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4sp-KQ-4Y9"/>
@@ -166,6 +137,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AP-j4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="439.43028485757122"/>
+        </scene>
+        <!--Meme DetailVC-->
+        <scene sceneID="uxf-kw-vO1">
+            <objects>
+                <viewController id="aGC-zl-XSc" customClass="MemeDetailVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hNe-op-brt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jt-5A-iad">
+                                <rect key="frame" x="166.5" y="466" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Khz-kI-0jk">
+                                <rect key="frame" x="31" y="238" width="313" height="191"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Jt-5A-iad" firstAttribute="top" secondItem="Khz-kI-0jk" secondAttribute="bottom" constant="37" id="30u-JF-97E"/>
+                            <constraint firstItem="Khz-kI-0jk" firstAttribute="leading" secondItem="uF2-yt-bXN" secondAttribute="leading" constant="31" id="PKN-C6-VcB"/>
+                            <constraint firstItem="Khz-kI-0jk" firstAttribute="centerX" secondItem="hNe-op-brt" secondAttribute="centerX" id="UcT-10-XzC"/>
+                            <constraint firstItem="3Jt-5A-iad" firstAttribute="centerX" secondItem="hNe-op-brt" secondAttribute="centerX" id="fPA-RR-KmF"/>
+                            <constraint firstItem="3Jt-5A-iad" firstAttribute="centerY" secondItem="hNe-op-brt" secondAttribute="centerY" constant="143" id="o7u-aV-axC"/>
+                            <constraint firstItem="Khz-kI-0jk" firstAttribute="centerY" secondItem="hNe-op-brt" secondAttribute="centerY" id="rrE-zh-T9L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uF2-yt-bXN"/>
+                    </view>
+                    <connections>
+                        <outlet property="memeImageView" destination="Khz-kI-0jk" id="Fma-Wt-2Ms"/>
+                        <outlet property="memeLabel" destination="3Jt-5A-iad" id="bvV-15-Hzi"/>
+                        <outlet property="view" destination="3Jt-5A-iad" id="iFE-T2-hNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yj3-91-PPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1529.6851574212894" y="436"/>
         </scene>
     </scenes>
     <resources>
