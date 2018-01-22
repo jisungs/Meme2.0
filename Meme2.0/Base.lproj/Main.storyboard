@@ -60,7 +60,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP1-fI-6xK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="-273"/>
+            <point key="canvasLocation" x="-52" y="-436"/>
         </scene>
         <!--Meme CollectionVC-->
         <scene sceneID="QEV-1X-Fby">
@@ -103,11 +103,12 @@
                     <navigationItem key="navigationItem" id="gPJ-rN-cky"/>
                     <connections>
                         <outlet property="flowLayout" destination="BsS-or-XH0" id="vYq-P0-U5P"/>
+                        <segue destination="aGC-zl-XSc" kind="push" identifier="collectionDetailSegue" id="GJq-CL-yep"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddY-Is-1M3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="-273.01349325337333"/>
+            <point key="canvasLocation" x="807" y="-437"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="vF3-Iq-6Ap">
@@ -136,6 +137,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AP-j4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="439.43028485757122"/>
+        </scene>
+        <!--Meme EditorVC-->
+        <scene sceneID="KTc-GR-MUN">
+            <objects>
+                <viewController id="HOJ-q3-NXR" customClass="MemeEditorVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a4H-Cf-IQi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Yfz-Qx-CkP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMD-O2-vGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="-438"/>
         </scene>
         <!--Meme DetailVC-->
         <scene sceneID="uxf-kw-vO1">
@@ -182,4 +198,7 @@
         <image name="collection_30x30" width="30" height="30"/>
         <image name="table_30x30" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Vw-E7-vd0"/>
+    </inferredMetricsTieBreakers>
 </document>
