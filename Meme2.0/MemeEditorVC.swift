@@ -60,8 +60,36 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     
     func subscribeToKeyboardNotifications(){
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
+    
+    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
+        
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height
+    }
+    
+    @objc func keyboardWillShow(_ notification:Notification) {
+        if view.frame.origin.y == 0 && bottomText.isFirstResponder {
+            view.frame.origin.y -= getKeyboardHeight(notification)
+        }else {
+            resetFrame()
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification:Notification) {
+        if view.frame.origin.y != 0{
+            resetFrame()
+        }
+    }
+    
+    func resetFrame(){
+        view.frame.origin.y = 0;
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
