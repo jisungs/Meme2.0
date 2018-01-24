@@ -11,6 +11,58 @@ import UIKit
 
 class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var camera: UIBarButtonItem!
+    @IBOutlet weak var topText: UITextField!
+    @IBOutlet weak var bottomText: UITextField!
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var navigationBar: UIToolbar!
+    
+    func customizeTextField(textField: UITextField, defaultText: String){
+        let memeTextAttributes:[String:Any] = [
+            NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+            NSAttributedStringKey.foregroundColor.rawValue:UIColor.white,
+            NSAttributedStringKey.font.rawValue: UIFont(name: "Arial", size: 40)!,
+            NSAttributedStringKey.strokeWidth.rawValue: -5
+        ]
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.text = defaultText
+        textField.textAlignment = .center
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func setupInitialView (){
+        imagePickerView.image = nil
+        camera.isEnabled = true
+        
+        customizeTextField(textField: topText, defaultText: "Top")
+        customizeTextField(textField: bottomText, defaultText: "Bottom")
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        camera.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setupInitialView()
+    }
+    
+    
+    func subscribeToKeyboardNotifications(){
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
