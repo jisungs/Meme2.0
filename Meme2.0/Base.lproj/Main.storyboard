@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="-52" y="-436"/>
         </scene>
-        <!--Meme CollectionVC-->
+        <!--sent Meme-->
         <scene sceneID="QEV-1X-Fby">
             <objects>
                 <collectionViewController id="MmH-P9-Awh" customClass="MemeCollectionVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,13 @@
                             <outlet property="delegate" destination="MmH-P9-Awh" id="px3-iD-C3p"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="gPJ-rN-cky"/>
+                    <navigationItem key="navigationItem" title="sent Meme" id="iSq-no-CNA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="c4E-Gn-fDC">
+                            <connections>
+                                <segue destination="HOJ-q3-NXR" kind="modal" identifier="collectionEditorSegue" id="QcS-kC-Epl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="BsS-or-XH0" id="vYq-P0-U5P"/>
                         <segue destination="aGC-zl-XSc" kind="push" identifier="collectionDetailSegue" id="GJq-CL-yep"/>
@@ -110,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="807" y="-437"/>
         </scene>
-        <!--Table View Controller-->
+        <!--sent Meme-->
         <scene sceneID="vF3-Iq-6Ap">
             <objects>
                 <tableViewController id="69t-Sc-ab2" sceneMemberID="viewController">
@@ -127,12 +133,18 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aGC-zl-XSc" kind="push" identifier="tableDelegateSegue" id="3Vw-E7-vd0"/>
+                                    <segue destination="aGC-zl-XSc" kind="push" identifier="tableDetailSegue" id="3Vw-E7-vd0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4sp-KQ-4Y9"/>
+                    <navigationItem key="navigationItem" title="sent Meme" id="cy1-1G-BeH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mih-0f-R6c">
+                            <connections>
+                                <segue destination="HOJ-q3-NXR" kind="modal" identifier="tableEditorSegue" id="jwN-d1-Ra8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AP-j4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +167,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WQc-fJ-usQ"/>
-                                    <barButtonItem title="Album" id="jzJ-7k-mxO">
+                                    <barButtonItem title="Album" width="85" id="jzJ-7k-mxO">
                                         <connections>
                                             <action selector="pickAnImage:" destination="HOJ-q3-NXR" id="yqV-1u-uZe"/>
                                         </connections>
@@ -181,14 +193,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buy-HN-gjt">
-                                <rect key="frame" x="61" y="127" width="254" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buy-HN-gjt">
+                                <rect key="frame" x="61" y="127" width="254" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-Qd-E9h">
-                                <rect key="frame" x="61" y="542" width="254" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-Qd-E9h">
+                                <rect key="frame" x="61" y="555" width="254" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -219,6 +231,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yfz-Qx-CkP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Rrj-Mw-IaP"/>
                     <connections>
                         <outlet property="bottomText" destination="zWk-Qd-E9h" id="HBN-Vs-CA8"/>
                         <outlet property="camera" destination="gAM-lS-hpx" id="bdu-lY-J0b"/>
@@ -226,6 +239,7 @@
                         <outlet property="navigationBar" destination="6vL-1F-DdN" id="6lG-Uo-Ayn"/>
                         <outlet property="pickAnImage" destination="jzJ-7k-mxO" id="76N-Ru-MoO"/>
                         <outlet property="shareButton" destination="a4u-Vr-Tlb" id="fOG-9r-IiX"/>
+                        <outlet property="toolBar" destination="adj-Ap-4vf" id="ZIV-QE-Fkt"/>
                         <outlet property="topText" destination="Buy-HN-gjt" id="gof-wt-EXn"/>
                     </connections>
                 </viewController>
@@ -280,5 +294,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GJq-CL-yep"/>
+        <segue reference="QcS-kC-Epl"/>
     </inferredMetricsTieBreakers>
 </document>

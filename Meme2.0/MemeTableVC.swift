@@ -11,18 +11,19 @@ import UIKit
 
 class MemeTableVc : UITableViewController {
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate    
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes = [Meme]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        appDelegate = (UIApplication.shared.delegate as! AppDelegate)
         
     }
     
     override func viewWillAppear(_ animate: Bool){
         super.viewWillAppear(true)
         memes = appDelegate.memes
-        
+        tableView.reloadData()
     }
     
     //Why it need "override"?
@@ -41,7 +42,17 @@ class MemeTableVc : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "tableDelegateSegue", sender: self)
+        performSegue(withIdentifier: "tableDetailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tableDetailSegue" {
+            if let vc = segue.destination as? MemeDetailVC {
+                if let index = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row {
+                    vc.image = memes[index].memedImage
+                }
+            }
+        }
     }
     
     

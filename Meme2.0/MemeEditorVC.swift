@@ -162,6 +162,18 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
         return false
     }
     
+    
+    
+    func saveMeme(memedImage:UIImage) {
+        // Create the meme
+        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage)
+        
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+    }
+    
     @IBAction func shareImage(_ sender: Any) {
         let memedImage = generateMemeImage()
         let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
@@ -177,19 +189,7 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
         self.present(activityController, animated: true, completion: nil)
     }
     
-    }
-    
-    
-
-    func save() {
-        // Create the meme
-        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage)
-        
-        // Add it to the memes array in the Application Delegate
-        let object = UIApplication.shared.delegate
-        let appDelegate = object as! AppDelegate
-        appDelegate.memes.append(meme)
-    }
+}
 
 
     

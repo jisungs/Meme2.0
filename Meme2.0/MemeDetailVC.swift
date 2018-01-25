@@ -14,20 +14,9 @@ class MemeDetailVC : UIViewController {
     var memes = [Meme]()
     var image : UIImage?
     
-    @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var memeLabel : UILabel!
-
     @IBOutlet weak var imageView: UIImageView!
 
-   /* override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-<<<<<<< HEAD
-        self.tabBarController?.tabBar.isHidden = true
-=======
-        if let memeImage = image {
-            imageView.image = memeImage
-        }
-    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
