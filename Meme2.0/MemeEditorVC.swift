@@ -89,24 +89,109 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
         view.frame.origin.y = 0;
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupInitialView()
+        view.backgroundColor = UIColor.gray
+        
+        self.bottomText.delegate = true as? UITextFieldDelegate
+        self.topText.delegate = true as? UITextFieldDelegate
     }
     
-    /*
+
+    @IBAction func pickAnImage(_ sender: Any) {
+        callImage(source: UIImagePickerControllerSourceType.photoLibrary)
+    }
+    
+    @IBAction func pickAnImageFromCamera(_ sender: Any) {
+        callImage(source: UIImagePickerControllerSourceType.camera)
+    }
+    
+    
+    func callImage(source:UIImagePickerControllerSourceType){
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = .photoLibrary
+        present(pickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage]
+        
+        if ((image as? UIImage) != nil){
+            
+            imagePickerView.image = image as! UIImage?
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        setupInitialView()
+    }
+    
+    func generateMemeImage()-> UIImage {
+        
+        hideToolbar(true)
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        showToolbar(false)
+        
+        return memedImage
+    }
+    
+    @discardableResult func hideToolbar(_ hide: Bool) -> Bool{
+        toolBar.isHidden = hide
+        navigationBar.isHidden = hide
+        return true
+    }
+    
+    @discardableResult func showToolbar(_ show:Bool) -> Bool {
+        toolBar.isHidden = show
+        navigationBar.isHidden = show
+        return false
+    }
+    
+    @IBAction func shareImage(_ sender: Any) {
+        let memedImage = generateMemeImage()
+        let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        
+        activityController.completionWithItemsHandler = {
+            activity, completed, items, error in
+            if completed {
+                self.saveMeme(memedImage: memedImage)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+        self.present(activityController, animated: true, completion: nil)
+    }
+    
+    }
+    
+    
+
     func save() {
         // Create the meme
-        let meme = Meme(top: topField.text!, bottom: bottomField.text!, image: imageView.image, memedImage: memedImage)
+        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage)
         
         // Add it to the memes array in the Application Delegate
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
     }
-*/
+
+
     
     
-}
+
