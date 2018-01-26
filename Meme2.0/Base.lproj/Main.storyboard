@@ -65,8 +65,8 @@
         <!--sent Meme-->
         <scene sceneID="QEV-1X-Fby">
             <objects>
-                <collectionViewController id="MmH-P9-Awh" customClass="MemeCollectionVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8vW-tB-xGg">
+                <collectionViewController id="MmH-P9-Awh" customClass="MemeCollectionVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8vW-tB-xGg" customClass="MemeColletionVC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,7 +108,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="flowLayout" destination="BsS-or-XH0" id="vYq-P0-U5P"/>
+                        <outlet property="collectionView" destination="8vW-tB-xGg" id="8Lj-QL-ZfW"/>
                         <segue destination="aGC-zl-XSc" kind="push" identifier="collectionDetailSegue" id="GJq-CL-yep"/>
                     </connections>
                 </collectionViewController>
@@ -119,7 +119,7 @@
         <!--sent Meme-->
         <scene sceneID="vF3-Iq-6Ap">
             <objects>
-                <tableViewController id="69t-Sc-ab2" sceneMemberID="viewController">
+                <tableViewController id="69t-Sc-ab2" customClass="MemeTableVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LFe-i5-Ukm" customClass="MemeTableVC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="sent Meme" id="cy1-1G-BeH">
+                    <navigationItem key="navigationItem" title="sent Meme" id="cy1-1G-BeH" customClass="MemeTableVC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mih-0f-R6c">
                             <connections>
                                 <segue destination="HOJ-q3-NXR" kind="modal" identifier="tableEditorSegue" id="jwN-d1-Ra8"/>
@@ -293,7 +293,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GJq-CL-yep"/>
-        <segue reference="QcS-kC-Epl"/>
+        <segue reference="3Vw-E7-vd0"/>
+        <segue reference="jwN-d1-Ra8"/>
     </inferredMetricsTieBreakers>
 </document>
