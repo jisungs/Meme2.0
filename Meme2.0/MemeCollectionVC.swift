@@ -11,6 +11,7 @@ import UIKit
 
 class MemeCollectionVC : UICollectionViewController {
     
+    
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes = [Meme]()
