@@ -109,6 +109,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="8vW-tB-xGg" id="8Lj-QL-ZfW"/>
+                        <outlet property="flowLayout" destination="BsS-or-XH0" id="JKj-MQ-2KL"/>
                         <segue destination="aGC-zl-XSc" kind="push" identifier="collectionDetailSegue" id="GJq-CL-yep"/>
                     </connections>
                 </collectionViewController>
@@ -202,7 +203,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mB5-KH-lu5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mB5-KH-lu5">
                                 <rect key="frame" x="0.0" y="73" width="375" height="520"/>
                             </imageView>
                         </subviews>
@@ -212,14 +213,14 @@
                             <constraint firstItem="6vL-1F-DdN" firstAttribute="trailing" secondItem="Yfz-Qx-CkP" secondAttribute="trailing" id="3Dc-SZ-Ihk"/>
                             <constraint firstItem="mB5-KH-lu5" firstAttribute="centerX" secondItem="a4H-Cf-IQi" secondAttribute="centerX" id="9g4-B0-ovq"/>
                             <constraint firstItem="6vL-1F-DdN" firstAttribute="top" secondItem="Yfz-Qx-CkP" secondAttribute="top" id="C0k-Tn-0kX"/>
-                            <constraint firstItem="mB5-KH-lu5" firstAttribute="centerY" secondItem="a4H-Cf-IQi" secondAttribute="centerY" constant="3.5" id="Gfm-p2-EmD"/>
+                            <constraint firstItem="mB5-KH-lu5" firstAttribute="centerY" secondItem="a4H-Cf-IQi" secondAttribute="centerY" constant="-0.5" id="Gfm-p2-EmD"/>
                             <constraint firstItem="6vL-1F-DdN" firstAttribute="trailing" secondItem="adj-Ap-4vf" secondAttribute="trailing" id="K3W-Dl-t7s"/>
                             <constraint firstItem="adj-Ap-4vf" firstAttribute="leading" secondItem="Yfz-Qx-CkP" secondAttribute="leading" id="MIe-vx-rOJ"/>
                             <constraint firstItem="adj-Ap-4vf" firstAttribute="top" secondItem="zWk-Qd-E9h" secondAttribute="bottom" constant="51" id="PFG-ci-sqE"/>
                             <constraint firstItem="Buy-HN-gjt" firstAttribute="leading" secondItem="Yfz-Qx-CkP" secondAttribute="leading" constant="61" id="Rys-XK-S3I"/>
                             <constraint firstItem="6vL-1F-DdN" firstAttribute="leading" secondItem="adj-Ap-4vf" secondAttribute="leading" id="Wuh-25-10s"/>
                             <constraint firstItem="6vL-1F-DdN" firstAttribute="top" secondItem="Yfz-Qx-CkP" secondAttribute="top" id="bq2-X8-Z7f"/>
-                            <constraint firstItem="mB5-KH-lu5" firstAttribute="top" secondItem="6vL-1F-DdN" secondAttribute="bottom" constant="13" id="cdS-Bx-dNV"/>
+                            <constraint firstItem="mB5-KH-lu5" firstAttribute="top" secondItem="6vL-1F-DdN" secondAttribute="bottom" constant="9" id="cdS-Bx-dNV"/>
                             <constraint firstItem="zWk-Qd-E9h" firstAttribute="leading" secondItem="Buy-HN-gjt" secondAttribute="leading" id="eCI-nN-Udp"/>
                             <constraint firstItem="6vL-1F-DdN" firstAttribute="leading" secondItem="Yfz-Qx-CkP" secondAttribute="leading" id="gER-8z-img"/>
                             <constraint firstItem="zWk-Qd-E9h" firstAttribute="trailing" secondItem="Buy-HN-gjt" secondAttribute="trailing" id="jHg-Ci-fnO"/>
@@ -293,7 +294,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Vw-E7-vd0"/>
-        <segue reference="jwN-d1-Ra8"/>
+        <segue reference="GJq-CL-yep"/>
+        <segue reference="QcS-kC-Epl"/>
     </inferredMetricsTieBreakers>
 </document>
