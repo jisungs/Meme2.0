@@ -66,7 +66,7 @@
         <scene sceneID="QEV-1X-Fby">
             <objects>
                 <collectionViewController id="MmH-P9-Awh" customClass="MemeCollectionVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8vW-tB-xGg" customClass="MemeColletionVC" customModule="Meme2_0" customModuleProvider="target">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8vW-tB-xGg" customClass="MemeColletionVC" customModule="Meme_2.0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,7 +77,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="LAX-ig-eva" customClass="MemeCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="LAX-ig-eva" customClass="MemeCollectionViewCell" customModule="Meme2_0">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MemeTableCell" rowHeight="36" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MemeTableCell" rowHeight="36" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0">
                                 <rect key="frame" x="0.0" y="28" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gws-rb-kK8" id="BaM-TI-t7c">
@@ -139,7 +139,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="sent Meme" id="cy1-1G-BeH" customClass="MemeTableVC">
+                    <navigationItem key="navigationItem" title="sent Meme" id="cy1-1G-BeH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mih-0f-R6c">
                             <connections>
                                 <segue destination="HOJ-q3-NXR" kind="modal" identifier="tableEditorSegue" id="jwN-d1-Ra8"/>
@@ -238,7 +238,6 @@
                         <outlet property="camera" destination="gAM-lS-hpx" id="bdu-lY-J0b"/>
                         <outlet property="imagePickerView" destination="mB5-KH-lu5" id="LoU-fj-ONU"/>
                         <outlet property="navigationBar" destination="6vL-1F-DdN" id="6lG-Uo-Ayn"/>
-                        <outlet property="pickAnImage" destination="jzJ-7k-mxO" id="76N-Ru-MoO"/>
                         <outlet property="shareButton" destination="a4u-Vr-Tlb" id="fOG-9r-IiX"/>
                         <outlet property="toolBar" destination="adj-Ap-4vf" id="ZIV-QE-Fkt"/>
                         <outlet property="topText" destination="Buy-HN-gjt" id="gof-wt-EXn"/>
