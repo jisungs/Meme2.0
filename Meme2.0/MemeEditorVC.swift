@@ -45,7 +45,7 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
         customizeTextField(textField: topText, defaultText: "Top")
         customizeTextField(textField: bottomText, defaultText: "Bottom")
         
-        shareButton.isEnabled = false
+        shareButton.isEnabled = true
         
     }
     
