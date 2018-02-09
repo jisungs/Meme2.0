@@ -40,19 +40,18 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func setupInitialView (){
         imagePickerView.image = nil
-        camera.isEnabled = true
+        camera.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         
         customizeTextField(textField: topText, defaultText: "Top")
         customizeTextField(textField: bottomText, defaultText: "Bottom")
         
-        shareButton.isEnabled = true
+        shareButton.isEnabled = false
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
-        
         camera.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
     }
     
@@ -139,7 +138,12 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
             
             imagePickerView.image = image as! UIImage?
             self.dismiss(animated: true, completion: nil)
+            self.shareButton.isEnabled = true
         }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelAction(_ sender: Any) {

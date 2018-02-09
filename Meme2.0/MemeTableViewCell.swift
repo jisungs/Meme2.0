@@ -12,5 +12,13 @@ import UIKit
 class MemeTableViewCell : UITableViewCell {
     var memes = [Meme]()
     
+    @IBOutlet weak var memeImage: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
 }

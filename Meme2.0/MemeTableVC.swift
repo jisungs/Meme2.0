@@ -26,23 +26,22 @@ class MemeTableVc : UITableViewController {
         tableView.reloadData()
     }
     
-    //Why it need "override"?
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appDelegate.memes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell", for : indexPath) as! MemeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell", for : indexPath) as! MemeTableViewCell
+        let meme = self.memes[(indexPath as NSIndexPath).row]
         
-        let meme = appDelegate.memes[(indexPath as NSIndexPath).row]
-        cell.textLabel?.text = meme.topText
-        cell.imageView?.image = meme.memedImage
+        cell.memeImage.image = meme.memedImage
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "tableDetailSegue", sender: self)
+        
+        performSegue(withIdentifier: "tableEditorSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
