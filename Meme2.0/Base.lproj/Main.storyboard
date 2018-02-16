@@ -120,17 +120,17 @@
         <!--sent Meme-->
         <scene sceneID="vF3-Iq-6Ap">
             <objects>
-                <tableViewController id="69t-Sc-ab2" customClass="MemeTableVC" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="69t-Sc-ab2" customClass="MemeTableVc" customModule="Meme2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LFe-i5-Ukm" customClass="MemeTableVC" customModule="Meme2_0" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MemeTableViewCell" rowHeight="94" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0">
-                                <rect key="frame" x="0.0" y="28" width="375" height="94"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MemeTableViewCell" rowHeight="114" id="gws-rb-kK8" customClass="MemeTableViewCell" customModule="Meme2_0" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gws-rb-kK8" id="BaM-TI-t7c">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="113.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08G-9U-2vL">
@@ -272,17 +272,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Khz-kI-0jk">
-                                <rect key="frame" x="16" y="91" width="343" height="511"/>
+                                <rect key="frame" x="0.0" y="87" width="375" height="515"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3Jt-5A-iad" firstAttribute="top" secondItem="Khz-kI-0jk" secondAttribute="bottom" constant="-136" id="30u-JF-97E"/>
-                            <constraint firstItem="Khz-kI-0jk" firstAttribute="leading" secondItem="uF2-yt-bXN" secondAttribute="leading" constant="16" id="PKN-C6-VcB"/>
+                            <constraint firstItem="Khz-kI-0jk" firstAttribute="leading" secondItem="uF2-yt-bXN" secondAttribute="leading" id="PKN-C6-VcB"/>
                             <constraint firstItem="Khz-kI-0jk" firstAttribute="centerX" secondItem="hNe-op-brt" secondAttribute="centerX" id="UcT-10-XzC"/>
                             <constraint firstItem="3Jt-5A-iad" firstAttribute="centerX" secondItem="hNe-op-brt" secondAttribute="centerX" id="fPA-RR-KmF"/>
                             <constraint firstItem="3Jt-5A-iad" firstAttribute="centerY" secondItem="hNe-op-brt" secondAttribute="centerY" constant="143" id="o7u-aV-axC"/>
-                            <constraint firstItem="Khz-kI-0jk" firstAttribute="centerY" secondItem="hNe-op-brt" secondAttribute="centerY" constant="13" id="rrE-zh-T9L"/>
+                            <constraint firstItem="Khz-kI-0jk" firstAttribute="centerY" secondItem="hNe-op-brt" secondAttribute="centerY" constant="11" id="rrE-zh-T9L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uF2-yt-bXN"/>
                     </view>

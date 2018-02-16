@@ -69,8 +69,7 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func unsubscribeFromKeyboardNotifications() {
         
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name:.UIKeyboardDidHide, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
@@ -148,35 +147,27 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBAction func cancelAction(_ sender: Any) {
         setupInitialView()
+        dismiss(animated: true, completion: nil)
     }
     
     func generateMemeImage()-> UIImage {
         
-        hideToolbar(true)
+        hidetoTopAndBottonToolbars(true)
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        showToolbar(false)
-        
+        hidetoTopAndBottonToolbars(false)
         return memedImage
     }
     
-    @discardableResult func hideToolbar(_ hide: Bool) -> Bool{
+    func hidetoTopAndBottonToolbars(_ hide: Bool){
         toolBar.isHidden = hide
         navigationBar.isHidden = hide
-        return true
+
     }
-    
-    @discardableResult func showToolbar(_ show:Bool) -> Bool {
-        toolBar.isHidden = show
-        navigationBar.isHidden = show
-        return false
-    }
-    
-    
     
     func saveMeme(memedImage:UIImage) {
         // Create the meme
