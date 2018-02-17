@@ -125,7 +125,7 @@ class MemeEditorVC :UIViewController, UIImagePickerControllerDelegate, UINavigat
     func callImage(source:UIImagePickerControllerSourceType){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
+        pickerController.sourceType = source
         present(pickerController, animated: true, completion: nil)
     }
     
